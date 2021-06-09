@@ -56,15 +56,47 @@
 		4B74F0E72670AB5100E3AA32 /* Contacts_HW2.7 */ = {
 			isa = PBXGroup;
 			children = (
+				4B74F0FC2670ABA600E3AA32 /* Models */,
 				4B74F0E82670AB5100E3AA32 /* AppDelegate.swift */,
 				4B74F0EA2670AB5100E3AA32 /* SceneDelegate.swift */,
-				4B74F0EC2670AB5100E3AA32 /* ViewController.swift */,
-				4B74F0EE2670AB5100E3AA32 /* Main.storyboard */,
-				4B74F0F12670AB5400E3AA32 /* Assets.xcassets */,
-				4B74F0F32670AB5400E3AA32 /* LaunchScreen.storyboard */,
+				4B74F0FE2670ABC600E3AA32 /* ViewControllers */,
+				4B74F0FD2670ABB900E3AA32 /* Storyboards */,
+				4B74F0FF2670ABDE00E3AA32 /* Resources */,
 				4B74F0F62670AB5400E3AA32 /* Info.plist */,
 			);
 			path = Contacts_HW2.7;
+			sourceTree = "<group>";
+		};
+		4B74F0FC2670ABA600E3AA32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4B74F0FD2670ABB900E3AA32 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4B74F0EE2670AB5100E3AA32 /* Main.storyboard */,
+				4B74F0F32670AB5400E3AA32 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4B74F0FE2670ABC600E3AA32 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B74F0EC2670AB5100E3AA32 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4B74F0FF2670ABDE00E3AA32 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4B74F0F12670AB5400E3AA32 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZSTN83ADW;
 				INFOPLIST_FILE = Contacts_HW2.7/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3ZSTN83ADW;
 				INFOPLIST_FILE = Contacts_HW2.7/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
