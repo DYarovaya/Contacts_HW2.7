@@ -6,14 +6,12 @@
 //
 
 struct Person {
-    var firstNames: String = ""
-    var lastNames: String = ""
-    var phones: String = ""
-    var emails: String = ""
+    var firstName: String = ""
+    var lastName: String = ""
+    var phone: String = ""
+    var email: String = ""
     
-
-    
-    static func getPerson() -> [Person] {
+    static func getContacts() -> [Person] {
         let firstNamesData = DataManager().firstNames.shuffled()
         let lastNamesData = DataManager().lastNames.shuffled()
         let phonesData = DataManager().phones.shuffled()
@@ -23,15 +21,13 @@ struct Person {
         for index in 0...firstNamesData.count - 1 {
             contacts.append(
                 Person(
-                    firstNames: firstNamesData[index],
-                    lastNames: lastNamesData[index],
-                    phones: phonesData[index],
-                    emails: emailsData[index]
+                    firstName: firstNamesData[index],
+                    lastName: lastNamesData[index],
+                    phone: phonesData[index],
+                    email: emailsData[index]
                 )
             )
         }
-        
         return contacts
-        
     }
 }

@@ -6,14 +6,14 @@
 //
 
 import UIKit
-
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
+protocol TabBarControllerDelegate {
+    func setupContacts() -> [Person]
 }
 
+class TabBarController: UITabBarController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+}
