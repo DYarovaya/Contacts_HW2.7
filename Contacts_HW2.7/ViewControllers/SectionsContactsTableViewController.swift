@@ -11,6 +11,7 @@ class SectionsContactsTableViewController: UITableViewController {
     private let  contacts = Person.getContacts()
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Contacts"
     }
 
     // MARK: - Table view data source
@@ -20,19 +21,31 @@ class SectionsContactsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        2
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let contact = contacts[section]
+        return "\(contact.firstName) \(contact.lastName)"
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "contactsCell", for: indexPath)
+        
+        var content = cell.defaultContentConfiguration()
+        
+        if indexPath.row == 0 {
+            content.text = contacts[indexPath.section].phone
+        } else {
+            content.text = contacts[indexPath.section].email
+        }
+       
+        cell.contentConfiguration = content
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
