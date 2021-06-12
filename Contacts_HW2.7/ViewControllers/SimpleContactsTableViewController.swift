@@ -12,21 +12,17 @@ class SimpleContactsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print(contacts)
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
         tableView.rowHeight = 50
         navigationItem.leftBarButtonItem = editButtonItem
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        navigationItem.title = "Contacts"
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         .none
     }
@@ -38,10 +34,10 @@ class SimpleContactsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         contacts.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath)
-
+        
         let contact = contacts[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
@@ -50,11 +46,10 @@ class SimpleContactsTableViewController: UITableViewController {
         
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let currentContact = contacts.remove(at: fromIndexPath.row)
         contacts.insert(currentContact, at: destinationIndexPath.row)
-        
     }
 }
 

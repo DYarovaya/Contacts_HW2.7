@@ -6,12 +6,8 @@
 //
 
 import UIKit
-protocol TabBarControllerDelegate {
-    func setupContacts() -> [Person]
-}
 
 class TabBarController: UITabBarController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
